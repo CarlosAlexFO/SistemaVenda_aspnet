@@ -1,0 +1,30 @@
+﻿@model ClienteModel
+@{
+    ViewData["Title"] = "Cadastro de Clientes";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<td><a asp-action="../Home/Menu" button class="btn btn-info">Voltar ao Menu</a></td>
+<br />
+<form asp-controller="Cliente" asp-action="Cadastro">
+    <input type="hidden" asp-for="Id" value="@try { @ViewBag.Cliente.Id } catch { }" />
+    <div class="form-group">
+        <label>Nome</label>
+        <input asp-for="Nome" type="text" class="form-control" value="@try { @ViewBag.Cliente.Nome } catch { }" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>CPF ou CNPJ</label>
+        <input asp-for="CPF" type="text" class="form-control" value="@try { @ViewBag.Cliente.CPF } catch { }" />
+        <span asp-validation-for="CPF" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" type="text" class="form-control" value="@try { @ViewBag.Cliente.Email } catch { }" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-block btn-success">Salvar</button>
+    
+</form>
+

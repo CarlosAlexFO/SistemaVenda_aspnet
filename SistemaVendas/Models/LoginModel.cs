@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using SistemaVendas.Uteis;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Http;
+using MySql.Data.MySqlClient;
 
 namespace SistemaVendas.Models
 {
@@ -15,7 +11,7 @@ namespace SistemaVendas.Models
 
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Informe o e-mail.")]
+        [Required(ErrorMessage = "Informe o e-mail do usuário!")]
         [DataType(DataType.EmailAddress)]
         [EmailAddress(ErrorMessage = "O e-mail informado é inválido!")]
         public string Email { get; set; }
@@ -27,10 +23,15 @@ namespace SistemaVendas.Models
         //Vamos depois criar um método mais adequado
         public bool ValidarLogin()
         {
-            string sql = $"SELECT ID, NOME FROM VENDEDOR WHERE EMAIL='{Email}' AND SENHA='{Senha}'";
+            string sql = $"SELECT ID, NOME FROM VENDEDOR WHERE EMAIL=@email AND SENHA=@senha";
+            MySqlCommand Command = new MySqlCommand();
+            Command.CommandText = sql;
+            Command.Parameters.AddWithValue("@email", Email);
+            Command.Parameters.AddWithValue("@senha", Senha);
 
             DAL objDAL = new DAL();
-            DataTable dt = objDAL.RetDataTable(sql);
+
+            DataTable dt = objDAL.RetDataTable(Command);
             if (dt.Rows.Count == 1)
             {
                 Id = dt.Rows[0]["ID"].ToString();

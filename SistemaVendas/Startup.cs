@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
-
-
 
 namespace SistemaVendas
 {
@@ -26,8 +20,7 @@ namespace SistemaVendas
         {
             services.AddMvc();
             services.AddSession();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor> ();
-
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,9 +28,7 @@ namespace SistemaVendas
         {
             if (env.IsDevelopment())
             {
-               
                 app.UseBrowserLink();
-                app.UseSession();
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -46,7 +37,7 @@ namespace SistemaVendas
             }
 
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

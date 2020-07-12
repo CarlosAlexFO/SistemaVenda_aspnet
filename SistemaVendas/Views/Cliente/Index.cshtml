@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Lista de Clientes";
+}
+
+<h3>@ViewData["Title"]</h3>
+
+
+<td><a asp-action="Cadastro" button class="btn btn-primary">Cadastrar Cliente</a></td>
+<p></p>
+<table class="table table-bordered center" >
+    <thead>
+        <tr>
+            
+            <th>Nome</th>
+            <th>CPF/CNPJ</th>
+            <th>Email</th>
+            <th class="center">*</th>
+            <th>*</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            foreach (var item in (List<ClienteModel>)ViewBag.ListaClientes)
+            {
+        <tr>
+            
+            <td>@item.Nome</td>
+            <td>@item.CPF</td>
+            <td>@item.Email</td>
+            <td align="center"> <a asp-action="Alterar" button class="btn btn-warning">Alterar</a></td>
+            <td align="center"> <a asp-action="Excluir" button class="btn btn-danger">Excluir</a></td>
+
+        </tr>
+            }
+
+
+        }
+    </tbody>
+</table>
+<br />
+@{
+
+
+    
+    
+    <td> <a asp-action="../Home/Menu" button class="btn btn-info">Voltar ao Menu</a></td>
+    
+
+}
+
