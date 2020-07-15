@@ -14280,11 +14280,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlo\\OneDrive\\Área de Trabalho\\ProjetosAspNet\\SistemaVendas\\SistemaVendas\\SistemaVendas.csproj",
+      "projectUniqueName": "C:\\Users\\carlo\\OneDrive\\Área de Trabalho\\ProjetosAspNet\\SistemaVenda_aspnet\\SistemaVendas\\SistemaVendas.csproj",
       "projectName": "SistemaVendas",
-      "projectPath": "C:\\Users\\carlo\\OneDrive\\Área de Trabalho\\ProjetosAspNet\\SistemaVendas\\SistemaVendas\\SistemaVendas.csproj",
+      "projectPath": "C:\\Users\\carlo\\OneDrive\\Área de Trabalho\\ProjetosAspNet\\SistemaVenda_aspnet\\SistemaVendas\\SistemaVendas.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\OneDrive\\Área de Trabalho\\ProjetosAspNet\\SistemaVendas\\SistemaVendas\\obj\\",
+      "outputPath": "C:\\Users\\carlo\\OneDrive\\Área de Trabalho\\ProjetosAspNet\\SistemaVenda_aspnet\\SistemaVendas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,13 @@
+﻿<h2>Excluir Produto</h2>
+<h3>Deseja realmente excluir o produto selecionado?</h3>
+<button type="button" class="btn btn-danger" onclick="Nao()">Não</button>
+<button type="button" class="btn btn-success" onclick="Sim()">Sim</button>
+<script>
+    function Sim()
+    {
+        window.location.href = '../../Produto/ExcluirProduto/' + '@ViewData["IdExcluir"].ToString()';
+    }
+    function Nao() {
+        window.location.href = '../../Produto/Index';
+    }
+</script>

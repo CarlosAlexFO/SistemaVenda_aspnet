@@ -1,0 +1,13 @@
+﻿<h2>Excluir Cliente</h2>
+<h3>Deseja realmente excluir o cliente selecionado?</h3>
+<button type="button" class="btn btn-danger" onclick="Nao()">Não</button>
+<button type="button" class="btn btn-success" onclick="Sim()">Sim</button>
+<script>
+    function Sim()
+    {
+        window.location.href = '../../Cliente/ExcluirCliente/' + '@ViewData["IdExcluir"].ToString()';
+    }
+    function Nao() {
+        window.location.href = '../../Cliente/Index';
+    }
+</script>

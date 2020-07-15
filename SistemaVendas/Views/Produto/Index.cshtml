@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<h3>@ViewData["Title"]</h3>
+
+
+<td><a asp-action="Cadastro" button class="btn btn-success">Cadastrar Produtos</a></td>
+<p></p>
+<table class="table table-bordered center">
+    <thead>
+        <tr class="btn-info">
+
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade Estoque</th>
+            <th>Unidade Medida</th>
+            <th>Link Foto</th>
+            <th></th>
+            <th></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            foreach (var item in (List<ProdutoModel>)ViewBag.ListaProdutos)
+            {
+                <tr>
+
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Preco_Unitario</td>
+                    <td>@item.Quantidade_Estoque</td>
+                    <td>@item.Unidade_Medida</td>
+                    <td><img src="@item.Link_Foto" width="150" height="150" /></td>
+                    <td> <button class="btn btn-warning" type="button" onclick="Editar(@item.Id)">Alterar</button></td>
+                    <td> <button class="btn btn-danger" type="button" onclick="Excluir(@item.Id)">Excluir</button></td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<br />
+<td> <a asp-action="../Home/Menu" button class="btn btn-primary">Voltar ao Menu</a></td>
+
+
+<script>
+    function Cadastrar() {
+        window.location.href = "../Produto/Cadastro";
+
+    }
+    function Editar(id) {
+        window.location.href = "../Produto/Cadastro/" + id;
+    }
+
+    function Excluir(id) {
+        window.location.href = "../Produto/Excluir/" + id;
+    }
+</script>
+

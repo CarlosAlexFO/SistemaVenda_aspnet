@@ -5,7 +5,7 @@
 
 
 <h2>@ViewData["Title"]</h2>
-<td><a asp-action="../Home/Menu" button class="btn btn-info">Voltar ao Menu</a></td>
+
 <br />
 <form asp-controller="Cliente" asp-action="Cadastro">
     <input type="hidden" asp-for="Id" value="@try { @ViewBag.Cliente.Id } catch { }" />
@@ -24,7 +24,9 @@
         <input asp-for="Email" type="text" class="form-control" value="@try { @ViewBag.Cliente.Email } catch { }" />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-block btn-success">Salvar</button>
-    
+    <div class="form-group">
+        <input type="submit" value="Cadastrar" class="btn btn-success" />
+        <a asp-action="Index" button class="btn btn-info">Voltar a Lista</a>
+    </div>
+   
 </form>
-

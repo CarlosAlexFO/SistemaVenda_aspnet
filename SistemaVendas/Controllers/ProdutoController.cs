@@ -7,11 +7,11 @@ using SistemaVendas.Models;
 
 namespace SistemaVendas.Controllers
 {
-    public class ClienteController : Controller
+    public class ProdutoController : Controller
     {
         public IActionResult Index()
         {
-            ViewBag.ListaClientes = new ClienteModel().ListarTodosClientes();
+            ViewBag.ListaProdutos = new ProdutoModel().ListarTodosProdutos();
             return View();
         }
 
@@ -20,29 +20,24 @@ namespace SistemaVendas.Controllers
         {
             if (id != null)
             {
-                //Carregar o registro do cliente numa ViewBag
-                ViewBag.Cliente = new ClienteModel().RetornarCliente(id);
+                //Carregar o registro do vendedor numa ViewBag
+                ViewBag.Produto = new ProdutoModel().RetornarProduto(id);
             }
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cadastro(ClienteModel cliente)
+        public IActionResult Cadastro(ProdutoModel produto)
         {
             if (ModelState.IsValid)
             {
-                cliente.Gravar();
+                produto.Gravar();
                 return RedirectToAction("Index");
             }
+       
 
             return View();
         }
-
-        //public IActionResult Editar(int id)
-        //{
-        //    ViewData["IdEditar"] = id;
-        //    return View();
-        //}
 
         public IActionResult Excluir(int id)
         {
@@ -50,9 +45,9 @@ namespace SistemaVendas.Controllers
             return View();
         }
 
-        public IActionResult ExcluirCliente(int id)
+        public IActionResult ExcluirProduto(int id)
         {
-            new ClienteModel().Excluir(id);
+            new ProdutoModel().Excluir(id);
             return View();
         }
     }

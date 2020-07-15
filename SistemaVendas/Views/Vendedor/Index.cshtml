@@ -1,19 +1,18 @@
 ﻿
 @{
-    ViewData["Title"] = "Lista de Clientes";
+    ViewData["Title"] = "Lista de Vendedores";
 }
 
 <h3>@ViewData["Title"]</h3>
 
 
-<td><a asp-action="Cadastro" button class="btn btn-success">Cadastrar Cliente</a></td>
+<td><a asp-action="Cadastro" button class="btn btn-success">Cadastrar Vendedor</a></td>
 <p></p>
 <table class="table table-bordered center">
     <thead>
         <tr class="btn-info">
 
             <th>Nome</th>
-            <th>CPF/CNPJ</th>
             <th>Email</th>
             <th></th>
             <th></th>
@@ -24,12 +23,11 @@
     <tbody>
 
         @{
-            foreach (var item in (List<ClienteModel>)ViewBag.ListaClientes)
+            foreach (var item in (List<VendedorModel>)ViewBag.ListaVendedores)
             {
         <tr>
 
             <td>@item.Nome</td>
-            <td>@item.CPF</td>
             <td>@item.Email</td>
             <td> <button class="btn btn-warning" type="button" onclick="Editar(@item.Id)">Alterar</button></td>
             <td> <button class="btn btn-danger" type="button" onclick="Excluir(@item.Id)">Excluir</button></td>
@@ -45,14 +43,14 @@
 
 <script>
     function Cadastrar() {
-        window.location.href = "../Cliente/Cadastro";
+        window.location.href = "../Vendedor/Cadastro";
 
     }
     function Editar(id) {
-        window.location.href = "../Cliente/Cadastro/" + id;
+        window.location.href = "../Vendedor/Cadastro/" + id;
     }
 
     function Excluir(id) {
-        window.location.href = "../Cliente/Excluir/" + id;
+        window.location.href = "../Vendedor/Excluir/" + id;
     }
 </script>
