@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Listagem de Vendas";
+}
+
+<h2>@ViewData["Title"]</h2>
+<br />
+<div><a asp-action="../Home/Menu" button class="btn btn-info">Voltar ao Menu</a></div>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Data</th>
+            <th>Vendedor</th>
+            <th>Cliente</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            foreach (var item in (List<VendaModel>)ViewBag.ListaVendas)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Data</td>
+                    <td>@item.Vendedor_Id</td>
+                    <td>@item.Cliente_Id</td>
+                    <td>R$ @item.Total</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<br />
+<button class="btn btn-success" type="button" onclick="Cadastrar()">Registrar Vendas</button>
+<script>
+    function Cadastrar() {
+        window.location.href = "../Venda/Registrar";
+
+    }
+</script>

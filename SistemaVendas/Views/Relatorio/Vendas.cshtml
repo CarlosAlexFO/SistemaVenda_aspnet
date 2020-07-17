@@ -1,0 +1,56 @@
+﻿@model RelatorioModel
+@{
+    ViewData["Title"] = "Relatório de Vendas";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<br />
+<form asp-controller="Relatorio" asp-action="Vendas">
+    <div class="form-group">
+        <label>Período </label>
+        <input asp-for="DataDe" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Período </label>
+        <input asp-for="DataAte" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Pesquisar" class="btn btn-success" />
+       <a asp-action="Index" button class="btn btn-info">Voltar aos Relatórios</a>
+    </div>
+</form>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Data</th>
+            <th>Vendedor</th>
+            <th>Cliente</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            try//utiliza o try quando houver a pesquisa e nao tiver nada, ele mostar apenas o cabeçalho
+            {
+                foreach (var item in (List<VendaModel>)ViewBag.ListaVendas)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Data</td>
+                        <td>@item.Vendedor_Id</td>
+                        <td>@item.Cliente_Id</td>
+                        <td>R$ @item.Total</td>
+                    </tr>
+                }
+            }
+            catch { }//fim do try
+        }
+    </tbody>
+</table>

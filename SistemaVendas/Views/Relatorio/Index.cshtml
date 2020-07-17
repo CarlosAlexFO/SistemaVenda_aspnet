@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Relatórios do Sistema";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+
+<button class="btn btn-block btn-primary" type="button" onclick="Relatorio('Vendas')">Vendas por Período</button>
+<button class="btn btn-block btn-warning" type="button" onclick="Relatorio('Grafico')">Gráfico de Vendas</button>
+<button class="btn btn-block btn-success" type="button" onclick="Relatorio('Comissao')">Comissão de Vendedores</button>
+
+
+
+<script>
+    function Relatorio(action) {
+        window.location.href = "../Relatorio/" + action;
+
+    }
+
+</script>
+<br/>
+<div><a asp-action="../Home/Menu" button class="btn btn-info">Voltar ao Menu</a></div>

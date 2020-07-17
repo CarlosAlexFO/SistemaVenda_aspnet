@@ -27,6 +27,9 @@
     <Content Update="Views\Produto\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\Shared\_LayoutLogin.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Vendedor\Cadastro.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

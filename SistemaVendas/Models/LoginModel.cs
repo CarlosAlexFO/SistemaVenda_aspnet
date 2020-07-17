@@ -19,8 +19,7 @@ namespace SistemaVendas.Models
         [Required(ErrorMessage = "Informe a senha do usuário!")]
         public string Senha { get; set; }
 
-        //Existe um problema grave de segurança com essa abordagem => SQL Injection
-        //Vamos depois criar um método mais adequado
+       
         public bool ValidarLogin()
         {
             string sql = $"SELECT ID, NOME FROM VENDEDOR WHERE EMAIL=@email AND SENHA=@senha";
