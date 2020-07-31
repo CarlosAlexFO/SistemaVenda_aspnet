@@ -1,3 +1,3 @@
 # SistemaVenda_aspnet
-Sistema de Venda com asp.NET
+Sistema de Venda com .NET
 MysSQL
