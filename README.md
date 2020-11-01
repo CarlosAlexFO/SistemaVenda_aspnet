@@ -2,7 +2,7 @@
 Sistema de Venda com .NET MVC.
 CSS
 
-Bottstrap
+Botstrap
 
 Javascript
 
