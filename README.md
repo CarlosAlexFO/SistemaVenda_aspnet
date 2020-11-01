@@ -1,5 +1,7 @@
 # SistemaVenda_aspnet
 Sistema de Venda com .NET MVC.
+EFC Tools
+
 CSS
 
 Botstrap
@@ -8,7 +10,7 @@ Javascript
 
 Html
 
-MysSQL
+Banco de Dados Workbench MysSQL
 
 Responsivo
 
