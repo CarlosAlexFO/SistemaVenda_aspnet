@@ -13,7 +13,7 @@ MysSQL
 Responsivo
 
 
-# As imagens abaixo demonstram uma rápida apresentação do funcionamento de cada tela.
+# As imagens abaixo, demonstram uma rápida apresentação do funcionamento de cada tela e suas características.
 
 # Tela de Login.
 ![Login](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/Login.gif)
