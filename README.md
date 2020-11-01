@@ -1,4 +1,4 @@
-# SistemaVenda_aspnet
+# Sistema Venda
 Sistema de Venda com .NET MVC.
 
 Xampp
