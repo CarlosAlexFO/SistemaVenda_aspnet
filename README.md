@@ -22,3 +22,8 @@ Responsivo
 
 # Tela de Menu.
 ![Menu](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/Menu.gif)
+
+
+
+# Tela de Cliente.
+![TelaCliente](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/TelaCliente.gif)
