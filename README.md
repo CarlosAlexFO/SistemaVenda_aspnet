@@ -2,4 +2,4 @@
 Sistema de Venda com .NET
 MysSQL
 
-![ Alt text](cliente.png) / ! [](cliente.png)
+![ Alt text](cliente.png) 
