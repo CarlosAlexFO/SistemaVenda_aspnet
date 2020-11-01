@@ -1,13 +1,19 @@
 # SistemaVenda_aspnet
 Sistema de Venda com .NET MVC.
 CSS
+
 Bottstrap
+
 Javascript
+
 Html
+
 MysSQL
 
+Responsivo
 
 
 
-# Jogo da Cobra desenvolvido em Html 5, utilizando o Css3.
+
+# Tela de Login.
 ![JogoCobraJs]()
