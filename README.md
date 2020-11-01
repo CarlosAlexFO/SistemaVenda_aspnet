@@ -36,7 +36,7 @@ Responsivo
 
 
 # Tela de Produtos.
-![TelaProduto](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/TelaProduto.gif)
+![TelaProdutos](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/TelaProdutos.gif)
 
 
 
