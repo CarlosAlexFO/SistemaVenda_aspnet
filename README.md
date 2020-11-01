@@ -1,5 +1,5 @@
 # Sistema Venda
-Sistema de Venda com .NET MVC.
+Sistema de Venda com ASP.Net MVC.
 
 Xampp
 
