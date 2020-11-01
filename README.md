@@ -46,8 +46,7 @@ Responsivo
 
 
 
-
-# Tela de Vendas.
+# Tela de Relatórios.
 ![TelaRelatorio](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/TelaRelatorio.gif)
 
 
