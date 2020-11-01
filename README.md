@@ -30,12 +30,12 @@ Responsivo
 
 
 
-# Tela de Cliente.
+# Tela de Clientes.
 ![TelaCliente](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/TelaCliente.gif)
 
 
 
-# Tela de Vendedor.
+# Tela de Vendedores.
 ![TelaVendedor](https://github.com/CarlosAlexFO/SistemaVenda_aspnet/blob/master/TelaVendedor.gif)
 
 
